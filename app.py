@@ -138,7 +138,7 @@ with prompt_expander:
     with cols[0]:
         SYSTEM_MESSAGE = st.text_area('Set a system message', value = default_system_prompt, height = 400)
     with cols[1]:
-        TEMPERATURE = float(st.select_slider('Set your temperature', [str(round(i, 2)) for i in np.linspace(0.0, 2, 101)], value = '1.0')) 
+        TEMPERATURE = float(st.select_slider('Set your temperature', [str(round(i, 2)) for i in np.linspace(0.0, 2, 101)], value = '0.0')) 
         MAX_TOKENS = st.slider('Number of max output tokens', min_value = 1, max_value = MODEL_MAX_TOKEN_LIMIT[MODEL]-MODEL_INPUT_TOKEN_SUMM_LIMIT[MODEL], value = 512)
 
 
