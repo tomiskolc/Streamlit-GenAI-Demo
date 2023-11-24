@@ -32,7 +32,7 @@ embedder = 'text-embedding-ada-002'
 MODEL_RELEVANT_DOC_NUMBER = {'gpt-3.5-turbo' : 3,
                             'gpt-3.5-turbo-16k' : 5,
                             'gpt-4' : 5,
-                            'gpt-4-1106-preview' : 5}
+                            'gpt-4-1106-preview' : 3}
 
 MODEL_INPUT_TOKEN_SUMM_LIMIT = {'gpt-3.5-turbo' : 3200,
                                 'gpt-3.5-turbo-16k' : 14200,
