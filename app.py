@@ -32,28 +32,33 @@ embedder = 'text-embedding-ada-002'
 MODEL_RELEVANT_DOC_NUMBER = {'gpt-3.5-turbo' : 3,
                             'gpt-3.5-turbo-16k' : 5,
                             'gpt-4' : 5,
-                            'gpt-4-1106-preview' : 3}
+                            'gpt-4-1106-preview' : 3,
+                            'gpt-4o' : 3}
 
 MODEL_INPUT_TOKEN_SUMM_LIMIT = {'gpt-3.5-turbo' : 3200,
                                 'gpt-3.5-turbo-16k' : 14200,
                                 'gpt-4' : 7200,
-                                'gpt-4-1106-preview' : 125000}
+                                'gpt-4-1106-preview' : 125000,
+                               'gpt-4o' : 128000}
 
 MODEL_MAX_TOKEN_LIMIT = {'gpt-3.5-turbo' : 4097,
                         'gpt-3.5-turbo-16k' : 16385,
                         'gpt-4' : 8192,
-                        'gpt-4-1106-preview' : 128000}
+                        'gpt-4-1106-preview' : 128000,
+                        'gpt-4o' : 128000}
 
 MODEL_COST = {'gpt-3.5-turbo' : 0.0015,
               'gpt-3.5-turbo-16k' : 0.003,
               'gpt-4' : 0.03,
-              'gpt-4-1106-preview' : 0.01}
+              'gpt-4-1106-preview' : 0.01,
+             'gpt-4o' : 0.005}
 
 
 MAX_CONTEXT_QUESTIONS = {'gpt-3.5-turbo' : 10,
                         'gpt-3.5-turbo-16k' : 40,
                         'gpt-4' : 20,
-                        'gpt-4-1106-preview' : 120}
+                        'gpt-4-1106-preview' : 120,
+                        'gpt-4o': 120}
 
 
 # functions, prompts
@@ -122,6 +127,7 @@ st.sidebar.markdown(
         - gpt-3.5-turbo-16k
         - gpt-4
         - gpt-4-1106-preview
+        - gpt-4o
 
     1. Prompt parameters
         - System message
@@ -130,7 +136,7 @@ st.sidebar.markdown(
 )
 
 MODEL = st.radio('Select the OpenAI model you want to use', 
-                 ['gpt-3.5-turbo', 'gpt-3.5-turbo-16k', 'gpt-4','gpt-4-1106-preview'], horizontal=True)
+                 ['gpt-3.5-turbo', 'gpt-3.5-turbo-16k', 'gpt-4','gpt-4-1106-preview','gpt-4o'], horizontal=True)
 
 prompt_expander = st.expander(label='Set your Prompt settings')
 with prompt_expander:
